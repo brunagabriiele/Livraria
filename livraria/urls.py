@@ -12,3 +12,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
 ]
+
+from core.views import CategoriaViewSet, EditoraViewSet
+
+
+router.register(r'categorias', CategoriaViewSet)
+router.register(r'editoras', EditoraViewSet)
+
